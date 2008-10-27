@@ -17,3 +17,7 @@ It adds two small things:
         </def>
         
     (to get this, you need `<include src="paperclip" plugin="paperclip_with_hobo">` in application.dryml)
+
+## Important Note
+
+The name of the plugin is important. It doesn't *have* to be `paperclip_with_hobo` but it will only work if this plugin loads *after* paperclip itself. Calling it `paperclip_something` is a good way to ensure that.

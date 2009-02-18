@@ -8,7 +8,8 @@ module ::Paperclip
       fields do |f|
         f.field "#{name}_file_name",    :string
         f.field "#{name}_content_type", :string
-        f.field "#{name}_file_size",    :string
+        f.field "#{name}_file_size",    :integer
+        f.field "#{name}_updated_at",   :datetime
       end
     
       declare_attr_type name, ::Paperclip::Attachment

@@ -16,7 +16,7 @@ It adds two small things:
           <%= file_field_tag param_name_for_this, attributes %>
         </def>
         
-    (to get this, you need `<include src="paperclip" plugin="paperclip_with_hobo">` in application.dryml)
+    (to get this, you need `<include src="paperclip" plugin="paperclip_with_hobo"/>` in application.dryml)
 
 ## Important Note
 

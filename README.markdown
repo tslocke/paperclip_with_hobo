@@ -30,7 +30,7 @@ Install paperclip_with_hobo
 
     ruby script/plugin install git://github.com/tablatom/paperclip_with_hobo.git
 
-Link paperclip in your `application.dryml`
+Include the `paperclip_with-hobo` taglib in your `application.dryml`
 
     <include src="paperclip" plugin="paperclip_with_hobo"/>
 
@@ -40,7 +40,8 @@ Add paperclip to one of your models:
 
 Your default form for the model will now include the four attributes
 added by `has_attached_file`.  To actually allow uploading, you will
-have to use `paperclip_with_hobo` input in a multipart form:
+need to manually add the attachment field (`photo` in the above example)
+to your form, and don't forget to add the `multipart` attribute:
 
     <extend tag="form" for="MyModel">
       <old-form merge multipart>

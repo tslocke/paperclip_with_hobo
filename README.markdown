@@ -22,13 +22,19 @@ It adds two small things:
 
 # Installation
 
-Install paperclip:
+Paperclip's official repository (https://github.com/thoughtbot/paperclip.git) has a bug (at the time of writing) that makes paperclip with hobo crash (see http://groups.google.com/group/hobousers/browse_thread/thread/752e154ff9725486). 
 
-    ruby script/plugin install git://github.com/thoughtbot/paperclip.git
+But we can use a fork which is nicely patched. Add this to your Gemfile:
 
-Install paperclip_with_hobo
+    gem 'paperclip', :git => "git://github.com/jeanmartin/paperclip.git", :branch => "master"
+    
+Update your bundle:
 
-    ruby script/plugin install git://github.com/tablatom/paperclip_with_hobo.git
+    bundle
+    
+Install paperclip_with_hobo:
+
+    rails plugin install git://github.com/tablatom/paperclip_with_hobo.git
 
 Include the `paperclip_with-hobo` taglib in your `application.dryml`
 
